@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="password" value="mobile"/>
+  <parameter name="username" value="mobile"/>
+  <test name="Tested(failed)">
+    <parameter name="password" value="mobile"/>
+    <parameter name="username" value="mobile"/>
+    <classes>
+      <class name="TestNGprograms.Xmlparametr">
+        <methods>
+          <include name="Browser"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- TestNGprograms.Xmlparametr -->
+    </classes>
+  </test> <!-- Tested(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,24 @@
+package JavaProgram;
+
+import java.util.Scanner;
+
+public class conditionstatementsccanerclass {
+	
+	public static void main(String args[])
+	{
+		//using sccanar class for user enter the value manually
+		
+		Scanner sc = new Scanner(System.in); //create object of scanner class
+		System.out.println("Enter value of abc : ");
+		 int  abc = sc.nextInt(); // variable declartaion 
+		 
+		 if (abc>20)
+		 {
+			 System.out.println("abc is greater than 20");
+		 }
+		 
+		 System.out.println("ABC is = " +abc);
+		
+	}
+
+}

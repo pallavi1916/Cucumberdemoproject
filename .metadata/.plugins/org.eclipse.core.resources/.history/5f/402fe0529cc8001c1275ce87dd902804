@@ -1,0 +1,26 @@
+package JavaProgram;
+
+import java.util.Scanner;
+
+public class calculateemi {
+             
+	public static void main(String args[])
+	{
+		//emi=P × r × (1 + r)n/((1 + r)n - 1)
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter principle Amount");
+		int p= sc.nextInt();
+		System.out.println("Enter the intrest rate ");
+		int r = sc.nextInt();
+		System.out.println("Enter numer of Month");
+		int n=sc.nextInt();
+		int pandi;
+		int EMI;
+		pandi = (p*r*(1+r)^n) / ((1+r)^n - 1);
+		EMI = pandi / n ;
+		System.out.println("The Emi is :" +pandi);
+		
+		
+	}
+}

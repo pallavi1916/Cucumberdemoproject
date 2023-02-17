@@ -1,0 +1,15 @@
+package JavaProgram;
+
+import java.util.Scanner;
+
+public class conditionstatementsccanerclass {
+	
+	public static void main(String args[])
+	{
+		//using sccanar class for user enter the value manually
+		
+		Scanner sc = new Scanner(System.in);
+		
+	}
+
+}

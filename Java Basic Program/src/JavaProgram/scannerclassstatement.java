@@ -1,0 +1,36 @@
+package JavaProgram;
+
+import java.util.Scanner;
+
+public class scannerclassstatement {
+	
+	public static void main(String args[])
+	{
+		//Enter a variable for user
+		//store one value in a variable and 2nd value in b variable
+		//add the two values and store it in variable result
+		//check if result is greater than 100
+		
+		Scanner obj = new Scanner(System.in);
+		Scanner obj1 = new Scanner(System.in);
+		System.out.println("Enter value of a : ");
+		
+		 int a = obj.nextInt();
+		 System.out.println("Enter value of b : ");
+		 int b = obj1.nextInt();
+		 int result = a*b;
+		 
+		 
+		 if(result >100)
+		 {
+			 System.out.println("Result is greater than 100");
+		 }
+		 else
+		 {
+			 System.out.println("Result is less than 100");
+		 }
+		 
+		 System.out.println("Result = " +result);
+	}
+
+}

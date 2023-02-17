@@ -1,0 +1,21 @@
+package JavaProgram;
+
+import java.util.Scanner;
+
+public class calculateemi {
+             
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter principle Amount");
+		int p= sc.nextInt();
+		System.out.println("Enter the intrest rate ");
+		int i = sc.nextInt();
+		i=i/(12*100);
+		System.out.println("Enter numer of Month");
+		int m=sc.nextInt();
+		double e=p * i * (1 + i)m/((1 + i)m - 1);
+		System.out.println("The Emi is :");
+		System.out.printf("%.2f",e);
+	}
+}

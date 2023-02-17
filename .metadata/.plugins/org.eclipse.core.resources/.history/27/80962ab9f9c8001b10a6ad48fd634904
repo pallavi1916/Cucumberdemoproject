@@ -1,0 +1,43 @@
+package Soochi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginPage {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		// Launch Browser
+         
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium-Automation\\chrome driver\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://mobile.callistoitsolutions.com/");
+		// for Login Page //
+		driver.findElement(By.id("txt_username")).sendKeys("mobile");
+		driver.findElement(By.id("txt_password")).sendKeys("mobile");
+		driver.findElement(By.id("lnk_login")).click();
+		if(url.contains("https://mobile.callistoitsolutions.com/"))
+		{
+			System.out.println("User Login Successfully");
+		}
+		Thread.sleep(1000);
+		// for product Details link //
+		driver.findElement(By.cssSelector("#ctl00_liPurchase > a")).click();
+		Thread.sleep(1000);
+		//for record invoice of purches product link //
+		driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_upPanael > div > div > div.span12 > div > div:nth-child(2) > div:nth-child(1) > ul > li > a > center > span:nth-child(5) > b")).click();
+		Thread.sleep(1000);
+		// for add new Supplier Link //
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_lnkOpenModelSuppliers")).click();
+		// for Add Supplier popup //
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplierName")).sendKeys("Ritesh Dhok");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplirMobileNo")).sendKeys("1234567890");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplierGstin")).sendKeys("Gs123");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplierGstin")).sendKeys("Dharmpeth Nagpur");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnModelAddSupplier")).click();
+		
+		
+	}
+
+}

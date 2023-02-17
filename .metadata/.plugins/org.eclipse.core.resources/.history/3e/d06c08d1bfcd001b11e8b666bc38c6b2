@@ -1,0 +1,179 @@
+package Soochi;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class LoginPage {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		// Launch Browser
+         
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium-Automation\\chrome driver\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://mobile.callistoitsolutions.com/");
+		
+		
+		// for Login Page //
+		
+		driver.findElement(By.id("txt_username")).sendKeys("mobile");
+		driver.findElement(By.id("txt_password")).sendKeys("mobile");
+		driver.findElement(By.id("lnk_login")).click();
+		String url = driver.getCurrentUrl();
+		System.out.println(driver.getCurrentUrl());
+		if(url.contains("https://mobile.callistoitsolutions.com/"))
+		{
+			System.out.println("User Login Successfully");
+		}
+		else
+		{
+			System.out.println("Login is unsuccessful ");
+		}
+		Thread.sleep(1000);
+		
+		// for product Details link //
+		
+		driver.findElement(By.linkText("Purchase Details")).click();
+		Thread.sleep(1000);
+		
+		//for record invoice of purches product link //
+		
+		driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_upPanael > div > div > div.span12 > div > div:nth-child(2) > div:nth-child(1) > ul > li > a > center > span:nth-child(5) > b")).click();
+		Thread.sleep(1000);
+		
+		// for add new Supplier Link //
+		
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_lnkOpenModelSuppliers")).click();
+		
+		// for Add Supplier popup //
+		
+		driver.getWindowHandle();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("#AddNewSupplierModel")).click();
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplierName")).sendKeys("Geeta Ramkrushna Mishra");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplirMobileNo")).sendKeys("1234567890");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplierGstin")).sendKeys("Gs123");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelSupplierAddress")).sendKeys("Dharmpeth Nagpur, Maharashtra");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnModelAddSupplier")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_InvoiceNo")).sendKeys("IN-12356");
+		Thread.sleep(1000);
+		
+		// for  Add New Product 
+		
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnOpenModelProduct")).click();
+		driver.getWindowHandle();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("#AddNewProductModel")).click();
+		
+		Select dropdown = new Select(driver.findElement(By.id("ctl00_ContentPlaceHolder1_ddlModelProBrand")));
+		dropdown.selectByVisibleText("SONY");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProName")).sendKeys("Xa1");
+		Select dropdown1 = new Select(driver.findElement(By.id("ctl00_ContentPlaceHolder1_ddlModelProUom")));
+		dropdown1.selectByVisibleText("mm");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProPurchaeRate")).sendKeys("47000");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProSallingRate")).sendKeys("50000");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProMrp")).sendKeys("54000");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProGstPer")).sendKeys("18");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProDiscPer")).sendKeys("12");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProHsn")).sendKeys("123242278");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProColor")).sendKeys("Black");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProSize")).sendKeys("6'7");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtModelProOpeningBal")).sendKeys("21000");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnModelAddProduct")).click();
+		Thread.sleep(1000);
+		
+		// For Add Product Details
+		
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtpro")).sendKeys("F7");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtColor")).sendKeys("Black");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_PurPrice")).sendKeys("83000");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtImei")).sendKeys("IEMI-7745884");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_Quantity")).sendKeys("1");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_FreeQty")).sendKeys("2");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_DiscPer")).sendKeys("2");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_DiscAmt")).sendKeys("1000");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_GstPer")).sendKeys("2");
+		//driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_GstAmt")).sendKeys("500");
+		driver.findElement(By.xpath("//html")).click();
+         Thread.sleep(1000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_upPanael")).click();
+		driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_gvCustomers_ctl02 > td:nth-child(1) > a")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtImei")).sendKeys("IEMI-7745774");
+		driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_btn_additem")).click();
+		Thread.sleep(1000);
+		
+		// for Other charges
+		
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtOtherCharge")).sendKeys("500");
+		Thread.sleep(1000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtGrandDiscPer")).sendKeys("2");
+		
+		// For Payment Details
+		
+		Select cash = new Select(driver.findElement(By.id("ctl00_ContentPlaceHolder1_Drop_PaymentMode")));
+		cash.selectByVisibleText("By Cash");
+		Thread.sleep(1000);
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_Remarks")).sendKeys("Payment Details");
+		driver.findElement(By.id("ctl00_ContentPlaceHolder1_btn_AddStock")).click();
+		Thread.sleep(1000);
+		driver.getWindowHandle(); // Handle the Alert and Pop up window
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept(); // Handle OK button on alert 
+		
+		
+		//Purchased Invoice Edit/Delete/Update print
+		driver.navigate().to("https://mobile.callistoitsolutions.com/Purchase_All_Report.aspx");
+		driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_upPanael > div > div > div.span12 > div > div:nth-child(2) > div:nth-child(2) > ul > li > a > center > span > b")).click();
+        WebElement datebox = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtFromDate"));
+          datebox.sendKeys("10022019");
+        WebElement datebox1 = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtTillDate"));
+          datebox1.sendKeys("10062021");
+          driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtSearch")).sendKeys("Pritesh");
+          driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnSearch")).click();
+          Thread.sleep(1000);
+		  driver.findElement(By.id("ctl00_ContentPlaceHolder1_rpt_Stock_ctl00_btn_Edit")).click();
+		  Thread.sleep(1000);
+		  
+		  // For Edit Button
+		  driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_InvoiceNo")).clear();
+		  driver.findElement(By.id("ctl00_ContentPlaceHolder1_txt_InvoiceNo")).sendKeys("IN-4488");
+		  driver.findElement(By.id("ctl00_ContentPlaceHolder1_btn_UpdateStock")).click();
+		  driver.getWindowHandle();
+		  Thread.sleep(1000);
+		  driver.switchTo().alert().accept();
+		  Thread.sleep(1000);
+		  
+		  // For Delete Button
+		  driver.navigate().to("https://mobile.callistoitsolutions.com/Purchase_All_Report.aspx");
+		  driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_upPanael > div > div > div.span12 > div > div:nth-child(2) > div:nth-child(2) > ul > li > a > center > span > b")).click();
+		  Thread.sleep(1000);
+		  driver.findElement(By.id("ctl00_ContentPlaceHolder1_rpt_Stock_ctl00_btn_Delete")).click();
+		  Thread.sleep(1000);
+		  driver.switchTo().alert().accept();
+		  Thread.sleep(1000);
+		  driver.switchTo().alert().accept();
+		  Thread.sleep(1000);
+		  
+		  // For Print Button
+		  driver.findElement(By.id("ctl00_ContentPlaceHolder1_rpt_Stock_ctl00_btnPrintBarcode")).click();
+		  Thread.sleep(1000);
+		  driver.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_upPanael > div > div > div > div > div.box-head > div > ul > li > a")).click();
+		  driver.getWindowHandle();
+		  Thread.sleep(1000);
+		  driver.switchTo().alert().dismiss();
+		  Thread.sleep(1000);
+		  
+		  
+	}
+
+}

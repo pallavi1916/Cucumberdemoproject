@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [groupname]">
+  <parameter name="policyno" value="wgd9876"/>
+  <test name="project(failed)">
+    <parameter name="policyno" value="wgd9876"/>
+    <classes>
+      <class name="selenium.TestngGroup">
+        <methods>
+          <include name="testtwo"/>
+        </methods>
+      </class> <!-- selenium.TestngGroup -->
+    </classes>
+  </test> <!-- project(failed) -->
+</suite> <!-- Failed suite [groupname] -->

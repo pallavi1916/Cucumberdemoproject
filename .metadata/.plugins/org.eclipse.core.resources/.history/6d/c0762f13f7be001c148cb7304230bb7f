@@ -1,0 +1,10 @@
+package JavaProgram;
+
+public class scannerclassstatement {
+	
+	public static void main(String args[])
+	{
+		
+	}
+
+}

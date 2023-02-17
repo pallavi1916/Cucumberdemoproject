@@ -1,0 +1,17 @@
+package JavaProgram;
+
+public class Conditionalstatement 
+{
+       public static void main(String args [])
+       {
+    	   int abc =10;
+    	   // using if statement
+    	   
+    	   if (abc>20)
+    	   {
+    		   System.out.println("abc is greater than 20");
+    	   }
+    	   
+    	   System.out.println("Conditional Statement");
+       }
+}

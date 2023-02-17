@@ -1,0 +1,18 @@
+package JavaProgram;
+
+import java.util.ArrayList;
+
+public class Arraylistprogram {
+    
+	public static void main(String args[])
+	{
+		ArrayList city = new ArrayList();
+		city.add("pallavi");
+		city.add("sudhakarrao");
+		city.add("Raut");
+		city.add(956173268);
+		System.out.println(city.get(3));
+		System.out.println(city.indexOf("sudhakarrao"));
+		System.out.println(city.remove(3));
+	}
+}

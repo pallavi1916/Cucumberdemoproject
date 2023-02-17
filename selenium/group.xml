@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="groupname">
+<test name="project">
+<parameter name="policyno" value="wgd9876"></parameter>
+<classes>
+<class name ="selenium.TestngGroup">
+ <methods >
+ <include name = "testtwo"></include>
+ </methods>
+</class>
+</classes>
+
+</test>
+</suite>

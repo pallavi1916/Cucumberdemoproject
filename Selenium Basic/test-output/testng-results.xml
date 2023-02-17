@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="49830" started-at="2021-06-30T09:50:24Z" finished-at="2021-06-30T09:51:14Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="49830" started-at="2021-06-30T09:50:24Z" finished-at="2021-06-30T09:51:14Z">
+      <class name="Webapp.Dataprovider">
+        <test-method status="PASS" signature="Openbrowser()[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="Openbrowser" is-config="true" duration-ms="5299" started-at="2021-06-30T15:20:24Z" finished-at="2021-06-30T15:20:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Openbrowser -->
+        <test-method status="PASS" signature="Search(java.lang.String)[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="Search" duration-ms="12858" started-at="2021-06-30T15:20:30Z" data-provider="readData" finished-at="2021-06-30T15:20:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Manual Testing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="close" is-config="true" duration-ms="871" started-at="2021-06-30T15:20:42Z" finished-at="2021-06-30T15:20:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="Openbrowser()[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="Openbrowser" is-config="true" duration-ms="4511" started-at="2021-06-30T15:20:43Z" finished-at="2021-06-30T15:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Openbrowser -->
+        <test-method status="PASS" signature="Search(java.lang.String)[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="Search" duration-ms="9452" started-at="2021-06-30T15:20:48Z" data-provider="readData" finished-at="2021-06-30T15:20:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Webdriver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="close" is-config="true" duration-ms="754" started-at="2021-06-30T15:20:57Z" finished-at="2021-06-30T15:20:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="Openbrowser()[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="Openbrowser" is-config="true" duration-ms="4721" started-at="2021-06-30T15:20:58Z" finished-at="2021-06-30T15:21:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Openbrowser -->
+        <test-method status="PASS" signature="Search(java.lang.String)[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="Search" duration-ms="10563" started-at="2021-06-30T15:21:03Z" data-provider="readData" finished-at="2021-06-30T15:21:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Selenium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Webapp.Dataprovider@6d00a15d]" name="close" is-config="true" duration-ms="759" started-at="2021-06-30T15:21:13Z" finished-at="2021-06-30T15:21:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Webapp.Dataprovider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
